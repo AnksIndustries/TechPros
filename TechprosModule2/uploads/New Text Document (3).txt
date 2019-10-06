@@ -1,0 +1,7 @@
+spyder 
+jupiter
+anaconda navigtor
+csv file
+num py 
+matplotlib
+panda

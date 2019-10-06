@@ -1,0 +1,91 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.6
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jan 18, 2019 at 03:33 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `exite`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `creat_gulak`
+--
+
+CREATE TABLE `creat_gulak` (
+  `gulak_id` varchar(20) NOT NULL,
+  `authetation` varchar(40) NOT NULL,
+  `address` text NOT NULL,
+  `account_no` int(30) NOT NULL,
+  `purpose` text NOT NULL,
+  `cont_rupee` int(5) NOT NULL,
+  `total_cont` int(6) NOT NULL,
+  UNIQUE KEY `gulak_id` (`gulak_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `creat_gulak`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transection`
+--
+
+CREATE TABLE `transection` (
+  `customer_id` varchar(20) default NULL,
+  `oder_id` varchar(20) default NULL,
+  `trans_id` varchar(20) default NULL,
+  `trans_amount` int(6) NOT NULL,
+  UNIQUE KEY `customer_id` (`customer_id`),
+  UNIQUE KEY `oder_id` (`oder_id`),
+  UNIQUE KEY `trans_id` (`trans_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transection`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `userid` varchar(20) NOT NULL,
+  `first_name` varchar(10) NOT NULL,
+  `last_name` varchar(10) NOT NULL,
+  `mobile_no` int(20) NOT NULL,
+  `d_o_b` date NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `email_id` varchar(30) NOT NULL,
+  `passs` varchar(20) NOT NULL,
+  UNIQUE KEY `userid` (`userid`,`mobile_no`,`email_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `transection`
+--
+ALTER TABLE `transection`
+  ADD CONSTRAINT `transection_ibfk_2` FOREIGN KEY (`oder_id`) REFERENCES `creat_gulak` (`gulak_id`),
+  ADD CONSTRAINT `transection_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `user` (`userid`);

@@ -1,0 +1,5 @@
+1.find area of circle when radius is given by user as float value
+2.find width of two concentric circle with difference radius
+3.calcuate the length covered BY A CIRCLE in one rotation.
+4.input from user and determine weather the particular number is 
+even or odd

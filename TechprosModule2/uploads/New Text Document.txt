@@ -1,0 +1,7 @@
+
+
+1.take input from user and check weather the number is perfect square
+2.square root calculare code
+3.cube root
+4.three input from user and check which is greater
+5.check number is alpha,numeric and alpha numeric

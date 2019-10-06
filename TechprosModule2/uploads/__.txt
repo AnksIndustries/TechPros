@@ -1,0 +1,17 @@
+coa				|           day one 
+dld				|           day two 
+data structure			|           day three
+pyhton complet			|           day four
+data structure using python	|           day five
+py game				|           day six
+database management		|           day seven
+
+                                    
+
+
+
+
+
+
+                                     : 'str' object does not support item assignment
+>>> input number in x using function 
